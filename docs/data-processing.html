@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>OEC Documentation</title>
+  <meta name="description" content="OEC Documentation">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="OEC Documentation" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://pachamaltese/recursive-solutions/" />
+  
+  
+  <meta name="github-repo" content="pachamaltese/recursive-solutions" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="OEC Documentation" />
+  
+  
+  
+
+<meta name="author" content="Pachá (Mauricio Vargas Sepúlveda)">
+
+
+<meta name="date" content="2018-03-07">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="data-availability.html">
+<link rel="next" href="the-mathematics-of-economic-complexity.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Table of Contents</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>What is Economic Complexity?</a></li>
+<li class="chapter" data-level="1" data-path="how-to-use-this-material.html"><a href="how-to-use-this-material.html"><i class="fa fa-check"></i><b>1</b> How to use this material?</a></li>
+<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data Sources</a></li>
+<li class="chapter" data-level="3" data-path="data-availability.html"><a href="data-availability.html"><i class="fa fa-check"></i><b>3</b> Data Availability</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-availability.html"><a href="data-availability.html#add-links-to-data"><i class="fa fa-check"></i><b>3.1</b> Add links to data</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-processing.html"><a href="data-processing.html"><i class="fa fa-check"></i><b>4</b> Data Processing</a><ul>
+<li class="chapter" data-level="4.1" data-path="data-processing.html"><a href="data-processing.html#tidy-data"><i class="fa fa-check"></i><b>4.1</b> Tidy Data</a></li>
+<li class="chapter" data-level="4.2" data-path="data-processing.html"><a href="data-processing.html#filling-some-gaps-in-our-data"><i class="fa fa-check"></i><b>4.2</b> Filling some gaps in our data</a></li>
+<li class="chapter" data-level="4.3" data-path="data-processing.html"><a href="data-processing.html#classification-conversion-in-monthly-data"><i class="fa fa-check"></i><b>4.3</b> Classification conversion in monthly data</a></li>
+<li class="chapter" data-level="4.4" data-path="data-processing.html"><a href="data-processing.html#countries-not-included-in-rankings-and-indicators"><i class="fa fa-check"></i><b>4.4</b> Countries not included in rankings and indicators</a></li>
+<li class="chapter" data-level="4.5" data-path="data-processing.html"><a href="data-processing.html#scripts-on-github"><i class="fa fa-check"></i><b>4.5</b> Scripts on GitHub</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="data-processing.html"><a href="data-processing.html#getting-and-cleaning-data-from-un-comtrade"><i class="fa fa-check"></i><b>4.5.1</b> Getting and cleaning data from UN COMTRADE</a></li>
+<li class="chapter" data-level="4.5.2" data-path="data-processing.html"><a href="data-processing.html#scraping-data-in-the-atlas-of-economic-complexity"><i class="fa fa-check"></i><b>4.5.2</b> Scraping data in The Atlas of Economic Complexity</a></li>
+<li class="chapter" data-level="4.5.3" data-path="data-processing.html"><a href="data-processing.html#product-space-layouts"><i class="fa fa-check"></i><b>4.5.3</b> Product space layouts</a></li>
+<li class="chapter" data-level="4.5.4" data-path="data-processing.html"><a href="data-processing.html#product-and-country-codes"><i class="fa fa-check"></i><b>4.5.4</b> Product and country codes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="data-processing.html"><a href="data-processing.html#software-versions"><i class="fa fa-check"></i><b>4.6</b> Software versions</a></li>
+<li class="chapter" data-level="4.7" data-path="data-processing.html"><a href="data-processing.html#hardware-information"><i class="fa fa-check"></i><b>4.7</b> Hardware information</a></li>
+<li class="chapter" data-level="4.8" data-path="data-processing.html"><a href="data-processing.html#reproducibility-notes"><i class="fa fa-check"></i><b>4.8</b> Reproducibility notes</a></li>
+<li class="chapter" data-level="4.9" data-path="data-processing.html"><a href="data-processing.html#coding-style-and-performant-code"><i class="fa fa-check"></i><b>4.9</b> Coding style and performant code</a></li>
+<li class="chapter" data-level="4.10" data-path="data-processing.html"><a href="data-processing.html#materials-of-interest"><i class="fa fa-check"></i><b>4.10</b> Materials of interest</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html"><i class="fa fa-check"></i><b>5</b> The Mathematics of Economic Complexity</a><ul>
+<li class="chapter" data-level="5.1" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#revealed-comparative-advantage-rca"><i class="fa fa-check"></i><b>5.1</b> Revealed Comparative Advantage (RCA)</a></li>
+<li class="chapter" data-level="5.2" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#smooth-revealed-comparative-advantage-srca"><i class="fa fa-check"></i><b>5.2</b> Smooth Revealed Comparative Advantage (SRCA)</a></li>
+<li class="chapter" data-level="5.3" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#diversity-and-ubiquity"><i class="fa fa-check"></i><b>5.3</b> Diversity and Ubiquity</a></li>
+<li class="chapter" data-level="5.4" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#reflections-method"><i class="fa fa-check"></i><b>5.4</b> Reflections Method</a></li>
+<li class="chapter" data-level="5.5" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#economic-complexity-index-eci"><i class="fa fa-check"></i><b>5.5</b> Economic Complexity Index (ECI)</a></li>
+<li class="chapter" data-level="5.6" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#product-complexity-index-pci"><i class="fa fa-check"></i><b>5.6</b> Product Complexity Index (PCI)</a></li>
+<li class="chapter" data-level="5.7" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#product-proximity"><i class="fa fa-check"></i><b>5.7</b> Product Proximity</a></li>
+<li class="chapter" data-level="5.8" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#country-proximity"><i class="fa fa-check"></i><b>5.8</b> Country Proximity</a></li>
+<li class="chapter" data-level="5.9" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#product-density"><i class="fa fa-check"></i><b>5.9</b> Product Density</a></li>
+<li class="chapter" data-level="5.10" data-path="the-mathematics-of-economic-complexity.html"><a href="the-mathematics-of-economic-complexity.html#country-density"><i class="fa fa-check"></i><b>5.10</b> Country Density</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="the-product-space.html"><a href="the-product-space.html"><i class="fa fa-check"></i><b>6</b> The Product Space</a></li>
+<li class="chapter" data-level="7" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i><b>7</b> Acknowledgements</a></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">OEC Documentation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-processing" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Data Processing</h1>
+<div id="tidy-data" class="section level2">
+<h2><span class="header-section-number">4.1</span> Tidy Data</h2>
+<p>We followed Tidy Data principles to obtain an output that in our opinion can be useful for others. Those principles are closely tied to those of relational databases and Codd’s relational algebra. We did not innovate at this point and we only limited to follow the principles exposed in <span class="citation">[<a href="#ref-tidydata2014">2</a>]</span> and <span class="citation">[<a href="#ref-r4ds2016">3</a>]</span> above all matters related to performing code and coding style.</p>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="fig/tidy-data.svg" alt="Data pipeline"  />
+<p class="caption">
+Figure 4.1: Data pipeline
+</p>
+</div>
+</div>
+<div id="filling-some-gaps-in-our-data" class="section level2">
+<h2><span class="header-section-number">4.2</span> Filling some gaps in our data</h2>
+<p>For each NA or 0 import/export value we tried to fill the gap. If country A reported NA or 0 exports (imports) of product B to (from) country C, then we searched what country C reported of imports (exports) of product B from (to) country A. The column <code>marker</code> indicated those replacements under this labels:</p>
+<table>
+<thead>
+<tr class="header">
+<th>marker</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>imports with replacements</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>exports with replacements</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>imports and exports with replacements</td>
+</tr>
+<tr class="even">
+<td>NA</td>
+<td>no replacements needed</td>
+</tr>
+</tbody>
+</table>
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="fig/clean-data.svg" alt="Criteria to replace null imports or exports"  />
+<p class="caption">
+Figure 4.2: Criteria to replace null imports or exports
+</p>
+</div>
+</div>
+<div id="classification-conversion-in-monthly-data" class="section level2">
+<h2><span class="header-section-number">4.3</span> Classification conversion in monthly data</h2>
+<p>As <a href="https://comtrade.un.org/data/">UN COMTRADE</a> states: “Monthly datasets may mix codes from multiple HS revisions and are provided as is except for standardization of trade flow and partner information, as well as conversion to U.S. dollars.”</p>
+<p>Our solution to obtain tidy datasets was to convert all HS codes available in raw datasets to HS rev 2007. In <a href="data-processing.html#materials-of-interest">4.10</a> we provide links to correspondence tables that allow us to do that conversion process.</p>
+</div>
+<div id="countries-not-included-in-rankings-and-indicators" class="section level2">
+<h2><span class="header-section-number">4.4</span> Countries not included in rankings and indicators</h2>
+<p>The curated data includes all the countries available from UN Comtrade data. However, RCA based calculations such as ECI, PCI, Proximity and Density explained in Chapter <a href="the-mathematics-of-economic-complexity.html#the-mathematics-of-economic-complexity">5</a> consider 128 countries that account for 99% of world trade, 97% of the world’s total GDP and 95% of the world’s population according to <span class="citation">[<a href="#ref-atlas2014">4</a>]</span>.</p>
+<p>We considered simultaneously:</p>
+<ul>
+<li>Countries with population greater or equal to 1.2 million</li>
+<li>Countries whose traded value is greater or equal than 1 billion</li>
+</ul>
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="fig/countries.svg" alt="Schematic of the procedure used to determine the countries that were included in the Atlas"  />
+<p class="caption">
+Figure 4.3: Schematic of the procedure used to determine the countries that were included in the Atlas
+</p>
+</div>
+</div>
+<div id="scripts-on-github" class="section level2">
+<h2><span class="header-section-number">4.5</span> Scripts on GitHub</h2>
+<div id="getting-and-cleaning-data-from-un-comtrade" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Getting and cleaning data from UN COMTRADE</h3>
+<ul>
+<li><a href="https://github.com/observatory-economic-complexity/oec-yearly-datasets">OEC Yearly Data</a></li>
+<li><a href="https://github.com/observatory-economic-complexity/oec-monthly-datasets">OEC Monthly Data</a></li>
+</ul>
+</div>
+<div id="scraping-data-in-the-atlas-of-economic-complexity" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> Scraping data in The Atlas of Economic Complexity</h3>
+<ul>
+<li><a href="https://github.com/observatory-economic-complexity/oec-atlas-data">OEC Atlas Data</a></li>
+</ul>
+</div>
+<div id="product-space-layouts" class="section level3">
+<h3><span class="header-section-number">4.5.3</span> Product space layouts</h3>
+<ul>
+<li><a href="https://github.com/observatory-economic-complexity/oec-product-space">OEC Product Space</a></li>
+</ul>
+</div>
+<div id="product-and-country-codes" class="section level3">
+<h3><span class="header-section-number">4.5.4</span> Product and country codes</h3>
+<ul>
+<li><a href="https://github.com/observatory-economic-complexity/oec-observatory-codes">OEC Observatory Codes</a></li>
+<li><a href="https://github.com/observatory-economic-complexity/oec-comtrade-codes">OEC Comtrade Codes</a></li>
+</ul>
+</div>
+</div>
+<div id="software-versions" class="section level2">
+<h2><span class="header-section-number">4.6</span> Software versions</h2>
+<p>At the moment we are using R 3.4.3 under Ubuntu Server 16.04 and our IDE is RStudio Server Pro 1.1.</p>
+<p>We built R from binaries in order to obtain a setup linked with multi-threaded BLAS/LAPACK libraries. Our built is linked to Intel MKL 2017 but our results can be reproduced if your R setup is linked to OpenBLAS or your system’s default, only performance differences should be noticed.</p>
+</div>
+<div id="hardware-information" class="section level2">
+<h2><span class="header-section-number">4.7</span> Hardware information</h2>
+<p>Our server features Intel© Xeon 2.27GHz (eight cores) processor and 32 GB (four DDR3 cards of eight gigabytes each).</p>
+<p>The functions are executed using parallelization on four cores because empirically we detected and overhead due to data communication with the cores when using more cores.</p>
+<p>Please notice that running our scripts with parallelization demands more RAM than the amount you can find on an average laptop.</p>
+</div>
+<div id="reproducibility-notes" class="section level2">
+<h2><span class="header-section-number">4.8</span> Reproducibility notes</h2>
+<p>To guarantee reproducibility each of our repositories contains a <a href="https://rstudio.github.io/packrat/">Packrat</a> library that is a snapshot of the R packages we are using. This prevents us from changes in syntax, functions or dependencies. Even our R installation is isolated from apt-get to avoid any accidental update that can change our results.</p>
+<p>Some projects are linked. In order to avoid multiple copies of files some projects read files from other projects. For example, <a href="https://github.com/observatory-economic-complexity/oec-yearly-indicators">OEC Yearly Indicators</a> input is the output of <a href="https://github.com/observatory-economic-complexity/oec-yearly-datasets">OEC Yearly Datasets</a> and <a href="https://github.com/observatory-economic-complexity/oec-atlas-data">OEC Atlas Data</a>.</p>
+<p>The only reproducibility flaw of this project lies in data downloading. Obtaining raw datasets from UN COMTRADE demands an API key that can only be obtained from institutional access. In my case Professor Cesar A. Hidalgo gave me temporary access.</p>
+<p>This project will not work on Windows without code edition. Multicore functionality supports multiple workers only on those operating systems that support the fork system call, and this excludes Windows.</p>
+</div>
+<div id="coding-style-and-performant-code" class="section level2">
+<h2><span class="header-section-number">4.9</span> Coding style and performant code</h2>
+<p>We used <a href="http://style.tidyverse.org/">Tidyverse Style Guide</a>. As cornerstone references for performant code we followed <span class="citation">[<a href="#ref-advancedr2014">5</a>]</span> and <span class="citation">[<a href="#ref-masteringsoftware2017">6</a>]</span>.</p>
+<p>Some matrix operations are written in Rcpp to take advantage of C++ speed. To take full advantage of hardware and numerical libraries we are using sparse matrices as it is explained in <span class="citation">[<a href="#ref-rcpparmadillo2018">7</a>]</span>.</p>
+</div>
+<div id="materials-of-interest" class="section level2">
+<h2><span class="header-section-number">4.10</span> Materials of interest</h2>
+<ul>
+<li><a href="https://github.com/observatory-economic-complexity/oec-atlas-data/blob/master/2-atlas-countries.csv">List of countries in the Atlas (scraped from the original PDF)</a></li>
+<li><a href="https://github.com/observatory-economic-complexity/oec-comtrade-codes/blob/master/country-codes.xls?raw=true">Country names with equivalency between UN numeric code, ISO 2 and ISO 3 (UN COMTRADE)</a></li>
+<li><a href="https://github.com/observatory-economic-complexity/oec-comtrade-codes/blob/master/official-list-of-comtrade-codes.xlsx?raw=true">UN COMTRADE product classifications</a></li>
+<li><a href="https://github.com/observatory-economic-complexity/oec-product-space/tree/master/hs92-sitc/2-layouts-rpackage">Layouts to visualize the product space</a></li>
+<li><a href="https://github.com/observatory-economic-complexity/oec-product-space/tree/master/hs92-sitc/3-layouts-d3plus2">Layouts to visualize the product space (for D3plus 2)</a></li>
+</ul>
+<p>UN COMTRADE product classifications may be of interest as it includes all trade classifications levels with detailed description of: (i) Harmonized System revisions 1992 (H0/HS92), 1996 (H1), 2002 (H2), 2007 (H3), 2012 (H4), 2017 (H5); Standard International Trade classification revisions 1 (S1), 2 (S2), 3 (S3), (iii) and 4 (S4); and Broad Economic Categories (BE).</p>
+
+</div>
+</div>
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-tidydata2014">
+<p>[2] H. Wickham, “Tidy data,” <em>Journal of Statistical Software, Articles</em>, vol. 59, no. 10, pp. 1–23, 2014.</p>
+</div>
+<div id="ref-r4ds2016">
+<p>[3] H. Wickham and G. Grolemund, <em>R for data science: Import, tidy, transform, visualize, and model data</em>. O’Reilly Media, Inc., 2016.</p>
+</div>
+<div id="ref-atlas2014">
+<p>[4] C. Hidalgo, R. Hausmann, S. Bustos, M. Coscia, A. Simoes, and M. Yildirim, <em>The atlas of economic complexity: Mapping paths to prosperity</em>. Mit Press, 2014.</p>
+</div>
+<div id="ref-advancedr2014">
+<p>[5] H. Wickham, <em>Advanced r</em>. CRC Press, 2014.</p>
+</div>
+<div id="ref-masteringsoftware2017">
+<p>[6] R. Peng, S. Kross, and B. Anderson, <em>Mastering software development in R</em>. Leanpub, 2017.</p>
+</div>
+<div id="ref-rcpparmadillo2018">
+<p>[7] B. Ni, D. Selivanov, D. Eddelbuettel, and Q. Kou, “RcppArmadillo: Sparse matrix support,” Comprehensive R Archive Network, 2018.</p>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65764144-13', 'auto');
+  ga('send', 'pageview');
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-availability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-mathematics-of-economic-complexity.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

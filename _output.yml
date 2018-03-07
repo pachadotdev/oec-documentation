@@ -1,0 +1,16 @@
+bookdown::gitbook:
+  includes:
+    after_body: [google_analytics.html]
+  css: style.css
+  split_by: chapter
+  pandoc_args: ["--csl", "ieee.csl"]
+  sharing:
+      facebook: yes
+      twitter: yes
+  config:
+    toc:
+      collapse: subsection
+      before: |
+        <li><a href="./">Table of Contents</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>

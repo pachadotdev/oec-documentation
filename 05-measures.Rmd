@@ -120,7 +120,7 @@ ECI_c = \frac{v_c - \mu_{v}}{\sigma_{v}}
 Where
 
 <!--* $\vec{v}$ is an eigenvector of $\tilde{M}$ associated with its second largest eigenvalue.-->
-* $\vec{v}$ is a vector whose coordinates are given by $k_{p}^{(19)}$ where $p \in 1,\ldots,P$
+* $\vec{v}$ is a vector whose coordinates are given by $k_{c}^{(19)}$ where $p \in 1,\ldots,C$
 * $\mu_v = \sum_c v_c / C$ (mean of $\vec{v}$) 
 * $\sigma_v = \sqrt{\sum_c (v_c - \mu_v)^2 / (C - 1)}$ (standard deviation of $\vec{v}$)
 
@@ -136,7 +136,7 @@ PCI_p = \frac{w_p - \mu_{w}}{\sigma_{w}}
 Where
 
 <!--* $\vec{w}$ is an eigenvector of $\hat{M}$ associated with its second largest eigenvalue.-->
-* $\vec{w}$ is a vector whose coordinates are given by $k_{p}^{(20)}$ where $c \in 1,\ldots,C$
+* $\vec{w}$ is a vector whose coordinates are given by $k_{p}^{(20)}$ where $p \in 1,\ldots,P$
 * $\mu_w = \sum_p w_p / P$ (mean of $\vec{w}$)
 * $\sigma_w = \sqrt{\sum_p (w_p - \mu_w)^2 / (P - 1)}$ (standard deviation of $\vec{w}$)
 

@@ -31,7 +31,7 @@ $$
 \hat{x}_{c,p}^{(t)} = \frac{2x_{c,p}^{(t)} + x_{c,p}^{(t-1)} + x_{c,p}^{(t-2)}}{4}
 $$
 
-PLease notice this average is different to the original method presented in [@atlas2014].
+Please notice this average is different to the original method presented in [@atlas2014].
 
 We use this measure to construct a matrix that connects each country to the products that it makes. The entries in the matrix are 1 if country exports product with Revealed Comparative Advantage larger than 1, and 0 otherwise. We define this as the matrix $M \in \mathbb{R}^{C\times P}$ with entries:
 
@@ -102,9 +102,7 @@ In a similar way we can define $\hat{M}$ with entries:
 \hat{m}_{p,p'} = \frac{1}{k_{p}^{(0)}} \sum_c m_{c,p} \frac{1}{k_{c}^{(0)}} m_{c,p}
 \end{equation}
 
-<!--
 We note \@ref(eq:kcn3) is satisfied when $k_{c}^{(n)} = k_{c}^{(n-2)} = 1$. This is the eigenvector of $\tilde{M}$ which is associated with its largest eigenvalue. Since this eigenvector is a vector of ones, it is not informative. We look, instead, for the eigenvector associated with the second largest eigenvalue. This is the eigenvector that captures the largest amount of variance in the system and is our measure of Economic Complexity.
--->
 
 In particular, the interpretation of the scores changes when considering odd or even iteration order $n$, high-order iterations are difficult to interpret, and the process asymptotically converges to a trivial fixed point.
 
@@ -142,9 +140,9 @@ Where
 
 ## Product Proximity
 
-To make products you need chunks of embedded knowledge which we call capabilities. The capabilities needed to produce one good may or may not be useful in the production of other goods. Since we do not observe capabilities directly, we create a measure that infers the similarity between the capabilities required by a pair of goods by looking at the probability that they are coexported. to quantify this similarity we assume that if two goods share most of the requisite capabilities, the countries that export one will also export the other. By the same token, goods that do not share many capabilities are less likely to be co-exported.
+To make products you need chunks of embedded knowledge which we call capabilities. The capabilities needed to produce one good may or may not be useful in the production of other goods. Since we do not observe capabilities directly, we create a measure that infers the similarity between the capabilities required by a pair of goods by looking at the probability that they are coexported. To quantify this similarity we assume that if two goods share most of the requisite capabilities, the countries that export one will also export the other. By the same token, goods that do not share many capabilities are less likely to be co-exported.
 
-Our measure is based on the conditional probability that a country that exports product $p$ will also export product $p'$ (see figure). Since conditional probabilities are not symmetric we take the minimum of the probability of exporting product $p$, given $p'$ and the reverse, to make the measure symmetric and more stringent. For instance, in the year 2008, 17 countries exported wine, 24 exported grapes and 11 exported both, all with $RCA > 1$. then, the product proximity between wines and grapes is 11/24=0.46. note that we divide by 24 instead of 17 to minimize false positives. For a pair of goods $p$ and $p'$ we define Product Proximity $\Phi \in \mathbb{R}^{P\times P}$ as:
+Our measure is based on the conditional probability that a country that exports product $p$ will also export product $p'$ (see figure). Since conditional probabilities are not symmetric we take the minimum of the probability of exporting product $p$, given $p'$ and the reverse, to make the measure symmetric and more stringent. For instance, in the year 2008, 17 countries exported wine, 24 exported grapes and 11 exported both, all with $RCA > 1$. then, the product proximity between wines and grapes is 11/24=0.46. Note that I divide by 24 instead of 17 to minimize false positives. For a pair of goods $p$ and $p'$ we define Product Proximity $\Phi \in \mathbb{R}^{P\times P}$ as:
 
 <!--
 $$

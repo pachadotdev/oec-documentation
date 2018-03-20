@@ -25,7 +25,7 @@
 <meta name="author" content="Pachá (Mauricio Vargas Sepúlveda)">
 
 
-<meta name="date" content="2018-03-07">
+<meta name="date" content="2018-03-20">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -70,7 +70,8 @@
 <li class="chapter" data-level="1" data-path="how-to-use-this-material.html"><a href="how-to-use-this-material.html"><i class="fa fa-check"></i><b>1</b> How to use this material?</a></li>
 <li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data Sources</a></li>
 <li class="chapter" data-level="3" data-path="data-availability.html"><a href="data-availability.html"><i class="fa fa-check"></i><b>3</b> Data Availability</a><ul>
-<li class="chapter" data-level="3.1" data-path="data-availability.html"><a href="data-availability.html#add-links-to-data"><i class="fa fa-check"></i><b>3.1</b> Add links to data</a></li>
+<li class="chapter" data-level="3.1" data-path="data-availability.html"><a href="data-availability.html#yearly-data"><i class="fa fa-check"></i><b>3.1</b> Yearly data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-availability.html"><a href="data-availability.html#monthly-data"><i class="fa fa-check"></i><b>3.2</b> Monthly data</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data-processing.html"><a href="data-processing.html"><i class="fa fa-check"></i><b>4</b> Data Processing</a><ul>
 <li class="chapter" data-level="4.1" data-path="data-processing.html"><a href="data-processing.html#tidy-data"><i class="fa fa-check"></i><b>4.1</b> Tidy Data</a></li>
@@ -125,9 +126,9 @@
             <section class="normal" id="section-">
 <div id="data-availability" class="section level1">
 <h1><span class="header-section-number">Section 3</span> Data Availability</h1>
-<div id="add-links-to-data" class="section level2">
-<h2><span class="header-section-number">3.1</span> Add links to data</h2>
-<p>The datasets I have prepared were obtained from UN COMTRADE while Alexander Simoes was in charge of wrangling CID data. I did cover different periods of years according to the data availability and part of those curated datasets are not in use on the OEC site at the moment:</p>
+<p>The datasets I have prepared were obtained from UN COMTRADE while Alexander Simoes was in charge of wrangling CID data. I did cover different periods of years according to the data availability and part of those curated datasets are not in use on the OEC site at the moment.</p>
+<div id="yearly-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Yearly data</h2>
 <table>
 <thead>
 <tr class="header">
@@ -137,31 +138,38 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="http://LINK.HERE">HS rev 1992</a></td>
+<td>HS rev 1992</td>
 <td>1992 – 2016</td>
 </tr>
 <tr class="even">
-<td><a href="http://LINK.HERE">HS rev 1996</a></td>
+<td>HS rev 1996</td>
 <td>1996 – 2016</td>
 </tr>
 <tr class="odd">
-<td><a href="http://LINK.HERE">HS rev 2002</a></td>
+<td>HS rev 2002</td>
 <td>2002 – 2016</td>
 </tr>
 <tr class="even">
-<td><a href="http://LINK.HERE">HS rev 2007</a></td>
+<td>HS rev 2007</td>
 <td>2007 – 2016</td>
 </tr>
 <tr class="odd">
-<td><a href="http://LINK.HERE">HS rev 2012</a></td>
+<td>HS rev 2012</td>
 <td>2012 – 2016</td>
 </tr>
 <tr class="even">
-<td><a href="http://LINK.HERE">SITC rev 2</a></td>
+<td>SITC rev 2</td>
 <td>2000 – 2016</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="monthly-data" class="section level2">
+<h2><span class="header-section-number">3.2</span> Monthly data</h2>
+<p>UN Comtrade provides monthly data for the period Jan, 2010 - Dec, 2016. That data is provides as is, and reporting agencies use different HS classifications from HS 92 to HS17.</p>
+<p>Raw monthly data mixes different HS codes under one column. Provided that goes against Tidy Data we used official correspondences to generate a column containing HS 07 codes only, and from there we generated our tidy datasets for the same HS revisions as yearly data.</p>
+<p>SITC rev 2 deserves special attention. SITC rev 2 classification maximum detail considers five digits codes. The correspondence between SITC and HS codes defines both four and six digits HS codes as SITC equivalents. The problem about this conversion is that four digits SITC codes englobe six digits SITC codes (i.e “5711” is an aggrupation of “57111” and “57112” that are plastic products).</p>
+<p>To obtain consistent tidy datasets with SITC codes we aggregated the trade and limited the depth level to four digits.</p>
 
 </div>
 </div>

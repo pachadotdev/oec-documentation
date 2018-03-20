@@ -25,7 +25,7 @@
 <meta name="author" content="Pachá (Mauricio Vargas Sepúlveda)">
 
 
-<meta name="date" content="2018-03-07">
+<meta name="date" content="2018-03-20">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -70,7 +70,8 @@
 <li class="chapter" data-level="1" data-path="how-to-use-this-material.html"><a href="how-to-use-this-material.html"><i class="fa fa-check"></i><b>1</b> How to use this material?</a></li>
 <li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data Sources</a></li>
 <li class="chapter" data-level="3" data-path="data-availability.html"><a href="data-availability.html"><i class="fa fa-check"></i><b>3</b> Data Availability</a><ul>
-<li class="chapter" data-level="3.1" data-path="data-availability.html"><a href="data-availability.html#add-links-to-data"><i class="fa fa-check"></i><b>3.1</b> Add links to data</a></li>
+<li class="chapter" data-level="3.1" data-path="data-availability.html"><a href="data-availability.html#yearly-data"><i class="fa fa-check"></i><b>3.1</b> Yearly data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-availability.html"><a href="data-availability.html#monthly-data"><i class="fa fa-check"></i><b>3.2</b> Monthly data</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data-processing.html"><a href="data-processing.html"><i class="fa fa-check"></i><b>4</b> Data Processing</a><ul>
 <li class="chapter" data-level="4.1" data-path="data-processing.html"><a href="data-processing.html#tidy-data"><i class="fa fa-check"></i><b>4.1</b> Tidy Data</a></li>
@@ -128,8 +129,8 @@
 <p>This section is adapted from <span class="citation">[<a href="#ref-atlas2014">4</a>]</span> but it differs at some points. In particular <span class="citation">[<a href="#ref-mesuringcomplexity2015">8</a>]</span> and <span class="citation">[<a href="#ref-interpretationreflections2014">9</a>]</span> provide useful technical details.</p>
 <div id="revealed-comparative-advantage-rca" class="section level2">
 <h2><span class="header-section-number">5.1</span> Revealed Comparative Advantage (RCA)</h2>
-<p>When associating countries to products it is important to take into account the size of the export volume of countries and that of the world trade of products. this is because, even for the same product, we expect the volume of exports of a large country like China, to be larger than the volume of exports of a small country like Uruguay. By the same token, we expect the export volume of products that represent a large fraction of world trade, such as cars or footwear, to represent a larger share of a country’s exports than products that account for a small fraction of world trade, like cotton seed oil or potato flour.</p>
-<p>To make countries and products comparable we use Balassa’s definition of Revealed Comparative Advantage (RCA). Balassa’s definition says that a country has revealed Comparative advantage in a product if it exports more than its “fair” share, that is, a share that is equal to the share of total world trade that the product represents. For example, in 2008, with exports of $42 billion, soybeans represented 0.35% of world trade. of this total, Brazil exported nearly $11 billion, and since Brazil’s total exports for that year were $140 billion, soybeans accounted for 7.8% of Brazil’s exports. This represents around 21 times Brazil’s “fair share” of soybean exports (7.8% divided by 0.35%), so we can say that Brazil has revealed comparative advantage in soybeans.</p>
+<p>When associating countries to products it is important to take into account the size of the export volume of countries and that of the world trade of products. This is because, even for the same product, we expect the volume of exports of a large country like China, to be larger than the volume of exports of a small country like Uruguay. By the same token, we expect the export volume of products that represent a large fraction of world trade, such as cars or footwear, to represent a larger share of a country’s exports than products that account for a small fraction of world trade, like cotton seed oil or potato flour.</p>
+<p>To make countries and products comparable we use Balassa’s definition of Revealed Comparative Advantage (RCA). Balassa’s definition says that a country has revealed Comparative advantage in a product if it exports more than its “fair” share, that is, a share that is equal to the share of total world trade that the product represents. For example, in 2008, with exports of $42 billion, soybeans represented 0.35% of world trade. Of this total, Brazil exported nearly $11 billion, and since Brazil’s total exports for that year were $140 billion, soybeans accounted for 7.8% of Brazil’s exports. This represents around 21 times Brazil’s “fair share” of soybean exports (7.8% divided by 0.35%), so we can say that Brazil has revealed comparative advantage in soybeans.</p>
 <p>Let <span class="math inline">\(x_{c,p}\)</span> represent the exports of country <span class="math inline">\(c\)</span> in product <span class="math inline">\(p\)</span>, we can express the Revealed Comparative Advantage that country <span class="math inline">\(c\)</span> has in product <span class="math inline">\(p\)</span> as:</p>
 <span class="math display" id="eq:rca">\[\begin{equation}
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
@@ -148,7 +149,7 @@ SRCA_{c,p}^{(t)} = \frac{\hat{x}_{c,p}^{(t)}}{\sum_c \hat{x}_{c,p}^{(t)}} / \fra
 <p><span class="math display">\[
 \hat{x}_{c,p}^{(t)} = \frac{2x_{c,p}^{(t)} + x_{c,p}^{(t-1)} + x_{c,p}^{(t-2)}}{4}
 \]</span></p>
-<p>PLease notice this average is different to the original method presented in <span class="citation">[<a href="#ref-atlas2014">4</a>]</span>.</p>
+<p>Please notice this average is different to the original method presented in <span class="citation">[<a href="#ref-atlas2014">4</a>]</span>.</p>
 <p>We use this measure to construct a matrix that connects each country to the products that it makes. The entries in the matrix are 1 if country exports product with Revealed Comparative Advantage larger than 1, and 0 otherwise. We define this as the matrix <span class="math inline">\(M \in \mathbb{R}^{C\times P}\)</span> with entries:</p>
 <span class="math display" id="eq:Mcp">\[\begin{equation}
 \tag{5.2}
@@ -199,9 +200,7 @@ k_{c}^{(n)} = \sum_c \left[\frac{1}{k_{c}^{(0)}} \sum_p m_{c,p} \frac{1}{k_{p}^{
 \tag{5.8}
 \hat{m}_{p,p&#39;} = \frac{1}{k_{p}^{(0)}} \sum_c m_{c,p} \frac{1}{k_{c}^{(0)}} m_{c,p}
 \end{equation}\]</span>
-<!--
-We note \@ref(eq:kcn3) is satisfied when $k_{c}^{(n)} = k_{c}^{(n-2)} = 1$. This is the eigenvector of $\tilde{M}$ which is associated with its largest eigenvalue. Since this eigenvector is a vector of ones, it is not informative. We look, instead, for the eigenvector associated with the second largest eigenvalue. This is the eigenvector that captures the largest amount of variance in the system and is our measure of Economic Complexity.
--->
+<p>We note <a href="the-mathematics-of-economic-complexity.html#eq:kcn3">(5.6)</a> is satisfied when <span class="math inline">\(k_{c}^{(n)} = k_{c}^{(n-2)} = 1\)</span>. This is the eigenvector of <span class="math inline">\(\tilde{M}\)</span> which is associated with its largest eigenvalue. Since this eigenvector is a vector of ones, it is not informative. We look, instead, for the eigenvector associated with the second largest eigenvalue. This is the eigenvector that captures the largest amount of variance in the system and is our measure of Economic Complexity.</p>
 <p>In particular, the interpretation of the scores changes when considering odd or even iteration order <span class="math inline">\(n\)</span>, high-order iterations are difficult to interpret, and the process asymptotically converges to a trivial fixed point.</p>
 <p>For the analysis we used <span class="math inline">\(n=19\)</span> to compute <span class="math inline">\(k_c\)</span> and <span class="math inline">\(n=20\)</span> to compute <span class="math inline">\(k_p\)</span>.</p>
 </div>
@@ -213,8 +212,9 @@ We note \@ref(eq:kcn3) is satisfied when $k_{c}^{(n)} = k_{c}^{(n-2)} = 1$. This
 ECI_c = \frac{v_c - \mu_{v}}{\sigma_{v}}
 \end{equation}\]</span>
 <p>Where</p>
+<!--* $\vec{v}$ is an eigenvector of $\tilde{M}$ associated with its second largest eigenvalue.-->
 <ul>
-<li><span class="math inline">\(\vec{v}\)</span> is an eigenvector of <span class="math inline">\(\tilde{M}\)</span> associated with its second largest eigenvalue.</li>
+<li><span class="math inline">\(\vec{v}\)</span> is a vector whose coordinates are given by <span class="math inline">\(k_{p}^{(19)}\)</span> where <span class="math inline">\(p \in 1,\ldots,P\)</span></li>
 <li><span class="math inline">\(\mu_v = \sum_c v_c / C\)</span> (mean of <span class="math inline">\(\vec{v}\)</span>)</li>
 <li><span class="math inline">\(\sigma_v = \sqrt{\sum_c (v_c - \mu_v)^2 / (C - 1)}\)</span> (standard deviation of <span class="math inline">\(\vec{v}\)</span>)</li>
 </ul>
@@ -227,16 +227,17 @@ ECI_c = \frac{v_c - \mu_{v}}{\sigma_{v}}
 PCI_p = \frac{w_p - \mu_{w}}{\sigma_{w}}
 \end{equation}\]</span>
 <p>Where</p>
+<!--* $\vec{w}$ is an eigenvector of $\hat{M}$ associated with its second largest eigenvalue.-->
 <ul>
-<li><span class="math inline">\(\vec{w}\)</span> is an eigenvector of <span class="math inline">\(\hat{M}\)</span> associated with its second largest eigenvalue.</li>
+<li><span class="math inline">\(\vec{w}\)</span> is a vector whose coordinates are given by <span class="math inline">\(k_{p}^{(20)}\)</span> where <span class="math inline">\(c \in 1,\ldots,C\)</span></li>
 <li><span class="math inline">\(\mu_w = \sum_p w_p / P\)</span> (mean of <span class="math inline">\(\vec{w}\)</span>)</li>
 <li><span class="math inline">\(\sigma_w = \sqrt{\sum_p (w_p - \mu_w)^2 / (P - 1)}\)</span> (standard deviation of <span class="math inline">\(\vec{w}\)</span>)</li>
 </ul>
 </div>
 <div id="product-proximity" class="section level2">
 <h2><span class="header-section-number">5.7</span> Product Proximity</h2>
-<p>To make products you need chunks of embedded knowledge which we call capabilities. The capabilities needed to produce one good may or may not be useful in the production of other goods. Since we do not observe capabilities directly, we create a measure that infers the similarity between the capabilities required by a pair of goods by looking at the probability that they are coexported. to quantify this similarity we assume that if two goods share most of the requisite capabilities, the countries that export one will also export the other. By the same token, goods that do not share many capabilities are less likely to be co-exported.</p>
-<p>Our measure is based on the conditional probability that a country that exports product <span class="math inline">\(p\)</span> will also export product <span class="math inline">\(p&#39;\)</span> (see figure). Since conditional probabilities are not symmetric we take the minimum of the probability of exporting product <span class="math inline">\(p\)</span>, given <span class="math inline">\(p&#39;\)</span> and the reverse, to make the measure symmetric and more stringent. For instance, in the year 2008, 17 countries exported wine, 24 exported grapes and 11 exported both, all with <span class="math inline">\(RCA &gt; 1\)</span>. then, the product proximity between wines and grapes is 11/24=0.46. note that we divide by 24 instead of 17 to minimize false positives. For a pair of goods <span class="math inline">\(p\)</span> and <span class="math inline">\(p&#39;\)</span> we define Product Proximity <span class="math inline">\(\Phi \in \mathbb{R}^{P\times P}\)</span> as:</p>
+<p>To make products you need chunks of embedded knowledge which we call capabilities. The capabilities needed to produce one good may or may not be useful in the production of other goods. Since we do not observe capabilities directly, we create a measure that infers the similarity between the capabilities required by a pair of goods by looking at the probability that they are coexported. To quantify this similarity we assume that if two goods share most of the requisite capabilities, the countries that export one will also export the other. By the same token, goods that do not share many capabilities are less likely to be co-exported.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Our measure is based on the conditional probability that a country that exports product <span class="math inline">\(p\)</span> will also export product <span class="math inline">\(p&#39;\)</span> (see figure). Since conditional probabilities are not symmetric we take the minimum of the probability of exporting product <span class="math inline">\(p\)</span>, given <span class="math inline">\(p&#39;\)</span> and the reverse, to make the measure symmetric and more stringent. For instance, in the year 2008, 17 countries exported wine, 24 exported grapes and 11 exported both, all with <span class="math inline">\(RCA &gt; 1\)</span>. Then, the product proximity between wines and grapes is 11/24=0.46. Note that we divide by 24 instead of 17 to minimize false positives. For a pair of goods <span class="math inline">\(p\)</span> and <span class="math inline">\(p&#39;\)</span> we define Product Proximity <span class="math inline">\(\Phi \in \mathbb{R}^{P\times P}\)</span> as: ======= Our measure is based on the conditional probability that a country that exports product <span class="math inline">\(p\)</span> will also export product <span class="math inline">\(p&#39;\)</span> (see figure). Since conditional probabilities are not symmetric we take the minimum of the probability of exporting product <span class="math inline">\(p\)</span>, given <span class="math inline">\(p&#39;\)</span> and the reverse, to make the measure symmetric and more stringent. For instance, in the year 2008, 17 countries exported wine, 24 exported grapes and 11 exported both, all with <span class="math inline">\(RCA &gt; 1\)</span>. then, the product proximity between wines and grapes is 11/24=0.46. Note that I divide by 24 instead of 17 to minimize false positives. For a pair of goods <span class="math inline">\(p\)</span> and <span class="math inline">\(p&#39;\)</span> we define Product Proximity <span class="math inline">\(\Phi \in \mathbb{R}^{P\times P}\)</span> as: &gt;&gt;&gt;&gt;&gt;&gt;&gt; e7dc8efc2193cf1d004ca0473a692f9ce847b41b</p>
 <!--
 $$
 \Phi_{p,p'} = \frac{\sum_c m_{c,p} M_{c,p'}}{\max(k_{p}^{(0)}, k_{p'}^{(0)})}

@@ -25,7 +25,7 @@ knitr::include_graphics("fig/clean-data.svg")
 
 ## Classification conversion in monthly data
 
-As [UN COMTRADE](https://comtrade.un.org/data/) states: "Monthly datasets may mix codes from multiple HS revisions and are provided as is except for standardization of trade flow and partner information, as well as conversion to U.S. dollars."
+As [UN COMTRADE](https://comtrade.un.org/data/) states: "Monthly datasets may mix codes from multiple HS revisions and are provided as is except for standardization of trade flow and partner information, as well as conversion to US dollars."
 
 Our solution to obtain tidy datasets was to convert all HS codes available in raw datasets to HS rev 2007. In \@ref(materials-of-interest) we provide links to correspondence tables that allow us to do that conversion process.
 

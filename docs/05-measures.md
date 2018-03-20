@@ -4,9 +4,9 @@ This section is adapted from [@atlas2014] but it differs at some points. In part
 
 ## Revealed Comparative Advantage (RCA)
 
-When associating countries to products it is important to take into account the size of the export volume of countries and that of the world trade of products. this is because, even for the same product, we expect the volume of exports of a large country like China, to be larger than the volume of exports of a small country like Uruguay. By the same token, we expect the export volume of products that represent a large fraction of world trade, such as cars or footwear, to represent a larger share of a country's exports than products that account for a small fraction of world trade, like cotton seed oil or potato flour.
+When associating countries to products it is important to take into account the size of the export volume of countries and that of the world trade of products. This is because, even for the same product, we expect the volume of exports of a large country like China, to be larger than the volume of exports of a small country like Uruguay. By the same token, we expect the export volume of products that represent a large fraction of world trade, such as cars or footwear, to represent a larger share of a country's exports than products that account for a small fraction of world trade, like cotton seed oil or potato flour.
 
-To make countries and products comparable we use Balassa's definition of Revealed Comparative Advantage (RCA). Balassa's definition says that a country has revealed Comparative advantage in a product if it exports more than its "fair" share, that is, a share that is equal to the share of total world trade that the product represents. For example, in 2008, with exports of \$42 billion, soybeans represented 0.35% of world trade. of this total, Brazil exported nearly \$11 billion, and since Brazil's total exports for that year were \$140 billion, soybeans accounted for 7.8% of Brazil's exports. This represents around 21 times Brazil's "fair share" of soybean exports (7.8% divided by 0.35%), so we can say that Brazil has revealed comparative advantage in soybeans.
+To make countries and products comparable we use Balassa's definition of Revealed Comparative Advantage (RCA). Balassa's definition says that a country has revealed Comparative advantage in a product if it exports more than its "fair" share, that is, a share that is equal to the share of total world trade that the product represents. For example, in 2008, with exports of \$42 billion, soybeans represented 0.35% of world trade. Of this total, Brazil exported nearly \$11 billion, and since Brazil's total exports for that year were \$140 billion, soybeans accounted for 7.8% of Brazil's exports. This represents around 21 times Brazil's "fair share" of soybean exports (7.8% divided by 0.35%), so we can say that Brazil has revealed comparative advantage in soybeans.
 
 Let $x_{c,p}$ represent the exports of country $c$ in product $p$, we can express the Revealed Comparative Advantage that country $c$ has in product $p$ as:
 
@@ -31,7 +31,7 @@ $$
 \hat{x}_{c,p}^{(t)} = \frac{2x_{c,p}^{(t)} + x_{c,p}^{(t-1)} + x_{c,p}^{(t-2)}}{4}
 $$
 
-PLease notice this average is different to the original method presented in [@atlas2014].
+Please notice this average is different to the original method presented in [@atlas2014].
 
 We use this measure to construct a matrix that connects each country to the products that it makes. The entries in the matrix are 1 if country exports product with Revealed Comparative Advantage larger than 1, and 0 otherwise. We define this as the matrix $M \in \mathbb{R}^{C\times P}$ with entries:
 
@@ -102,9 +102,7 @@ In a similar way we can define $\hat{M}$ with entries:
 \hat{m}_{p,p'} = \frac{1}{k_{p}^{(0)}} \sum_c m_{c,p} \frac{1}{k_{c}^{(0)}} m_{c,p}
 \end{equation}
 
-<!--
 We note \@ref(eq:kcn3) is satisfied when $k_{c}^{(n)} = k_{c}^{(n-2)} = 1$. This is the eigenvector of $\tilde{M}$ which is associated with its largest eigenvalue. Since this eigenvector is a vector of ones, it is not informative. We look, instead, for the eigenvector associated with the second largest eigenvalue. This is the eigenvector that captures the largest amount of variance in the system and is our measure of Economic Complexity.
--->
 
 In particular, the interpretation of the scores changes when considering odd or even iteration order $n$, high-order iterations are difficult to interpret, and the process asymptotically converges to a trivial fixed point.
 
@@ -121,7 +119,8 @@ ECI_c = \frac{v_c - \mu_{v}}{\sigma_{v}}
 
 Where
 
-* $\vec{v}$ is an eigenvector of $\tilde{M}$ associated with its second largest eigenvalue.
+<!--* $\vec{v}$ is an eigenvector of $\tilde{M}$ associated with its second largest eigenvalue.-->
+* $\vec{v}$ is a vector whose coordinates are given by $k_{p}^{(19)}$ where $p \in 1,\ldots,P$
 * $\mu_v = \sum_c v_c / C$ (mean of $\vec{v}$) 
 * $\sigma_v = \sqrt{\sum_c (v_c - \mu_v)^2 / (C - 1)}$ (standard deviation of $\vec{v}$)
 
@@ -136,15 +135,20 @@ PCI_p = \frac{w_p - \mu_{w}}{\sigma_{w}}
 
 Where
 
-* $\vec{w}$ is an eigenvector of $\hat{M}$ associated with its second largest eigenvalue.
+<!--* $\vec{w}$ is an eigenvector of $\hat{M}$ associated with its second largest eigenvalue.-->
+* $\vec{w}$ is a vector whose coordinates are given by $k_{p}^{(20)}$ where $c \in 1,\ldots,C$
 * $\mu_w = \sum_p w_p / P$ (mean of $\vec{w}$)
 * $\sigma_w = \sqrt{\sum_p (w_p - \mu_w)^2 / (P - 1)}$ (standard deviation of $\vec{w}$)
 
 ## Product Proximity
 
-To make products you need chunks of embedded knowledge which we call capabilities. The capabilities needed to produce one good may or may not be useful in the production of other goods. Since we do not observe capabilities directly, we create a measure that infers the similarity between the capabilities required by a pair of goods by looking at the probability that they are coexported. to quantify this similarity we assume that if two goods share most of the requisite capabilities, the countries that export one will also export the other. By the same token, goods that do not share many capabilities are less likely to be co-exported.
+To make products you need chunks of embedded knowledge which we call capabilities. The capabilities needed to produce one good may or may not be useful in the production of other goods. Since we do not observe capabilities directly, we create a measure that infers the similarity between the capabilities required by a pair of goods by looking at the probability that they are coexported. To quantify this similarity we assume that if two goods share most of the requisite capabilities, the countries that export one will also export the other. By the same token, goods that do not share many capabilities are less likely to be co-exported.
 
-Our measure is based on the conditional probability that a country that exports product $p$ will also export product $p'$ (see figure). Since conditional probabilities are not symmetric we take the minimum of the probability of exporting product $p$, given $p'$ and the reverse, to make the measure symmetric and more stringent. For instance, in the year 2008, 17 countries exported wine, 24 exported grapes and 11 exported both, all with $RCA > 1$. then, the product proximity between wines and grapes is 11/24=0.46. note that we divide by 24 instead of 17 to minimize false positives. For a pair of goods $p$ and $p'$ we define Product Proximity $\Phi \in \mathbb{R}^{P\times P}$ as:
+<<<<<<< HEAD
+Our measure is based on the conditional probability that a country that exports product $p$ will also export product $p'$ (see figure). Since conditional probabilities are not symmetric we take the minimum of the probability of exporting product $p$, given $p'$ and the reverse, to make the measure symmetric and more stringent. For instance, in the year 2008, 17 countries exported wine, 24 exported grapes and 11 exported both, all with $RCA > 1$. Then, the product proximity between wines and grapes is 11/24=0.46. Note that we divide by 24 instead of 17 to minimize false positives. For a pair of goods $p$ and $p'$ we define Product Proximity $\Phi \in \mathbb{R}^{P\times P}$ as:
+=======
+Our measure is based on the conditional probability that a country that exports product $p$ will also export product $p'$ (see figure). Since conditional probabilities are not symmetric we take the minimum of the probability of exporting product $p$, given $p'$ and the reverse, to make the measure symmetric and more stringent. For instance, in the year 2008, 17 countries exported wine, 24 exported grapes and 11 exported both, all with $RCA > 1$. then, the product proximity between wines and grapes is 11/24=0.46. Note that I divide by 24 instead of 17 to minimize false positives. For a pair of goods $p$ and $p'$ we define Product Proximity $\Phi \in \mathbb{R}^{P\times P}$ as:
+>>>>>>> e7dc8efc2193cf1d004ca0473a692f9ce847b41b
 
 <!--
 $$

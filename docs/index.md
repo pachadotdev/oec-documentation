@@ -1,7 +1,7 @@
 --- 
 title: "OEC Documentation"
 author: "Pachá (Mauricio Vargas Sepúlveda)"
-date: "2018-03-28"
+date: "2018-04-26"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [references.bib]
@@ -10,10 +10,14 @@ github-repo: pachamaltese/recursive-solutions
 url: 'http\://pachamaltese/recursive-solutions/'
 ---
 
-# What is Economic Complexity? {-}
+# A simple documentation {-}
 
-We owe to Adam Smith the idea that the division (specialization) of labor is the secret of the wealth of nations. In a modern interpretation, the division of labor into markets and organizations is what allows the knowledge held by few to reach many, making us collectively wiser.
+This documentation is an attempt to try to explain how to use the scripts that generate the data that powers [The Atlas of Economic Complexity](https://atlas.media.mit.edu/). 
 
-The complexity of an economy is related to the multiplicity of useful knowledge embedded in it. Because individuals are limited in what they know, the only way societies can expand their knowledge base is by facilitating the interaction of individuals in increasingly complex networks in order to make products. We can measure economic complexity by the mix of these products that countries are able to make.
+I made all the scripts available on my [GitHub profile](https://github.com/pachamaltese) and I also created a [GitHub organization](https://github.com/observatory-economic-complexity/) as a backup.
 
-Some products, like medical imaging devices or jet engines, embed large amounts of knowledge and are the results of very large networks of people and organizations. These products cannot be made in simpler economies that are missing parts of this network’s capability set. Economic complexity, therefore, is expressed in the composition of a country’s productive output and reflects the structures that emerge to hold and combine knowledge.
+<!-- Adam Smith proposed the idea that the division of labor is the secret of the wealth of nations. -->
+
+<!-- The complexity of an economy is related to the multiplicity of useful knowledge embedded in it. Because individuals are limited in what they know, the only way societies can expand their knowledge base is by facilitating the interaction of individuals in increasingly complex networks in order to make products.  -->
+
+<!-- Some products, like airplanes, are the results of very large networks of people and organizations. These products cannot be made in simpler economies that are missing parts of this network’s capability set. Economic complexity, therefore, is expressed in the composition of a country’s productive output. -->

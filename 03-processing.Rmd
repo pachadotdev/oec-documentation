@@ -4,10 +4,9 @@
 
 I followed Tidy Data principles. Those principles are closely tied to those of relational databases and Codd’s relational algebra. I only followed the principles exposed in [@tidydata2014] and [@r4ds2016] above all matters related to performing code and coding style.
 
-<div class="figure">
-<img src="fig/tidy-data.svg" alt="Data pipeline"  />
-<p class="caption">(\#fig:unnamed-chunk-1)Data pipeline</p>
-</div>
+```{r, echo = F, fig.cap="Data pipeline"}
+knitr::include_graphics("fig/tidy-data.svg")
+```
 
 ## Filling gaps in our data
 
@@ -35,10 +34,9 @@ I considered simultaneously:
 * Countries with population greater or equal to 1.2 million
 * Countries whose traded value is greater or equal than 1 billion
 
-<div class="figure">
-<img src="fig/countries.svg" alt="Schematic of the procedure used to determine the countries that were included in the Atlas"  />
-<p class="caption">(\#fig:unnamed-chunk-2)Schematic of the procedure used to determine the countries that were included in the Atlas</p>
-</div>
+```{r, echo = F, fig.cap="Schematic of the procedure used to determine the countries that were included in the Atlas"}
+knitr::include_graphics("fig/countries.svg")
+```
 
 ## GitHub repositories
 

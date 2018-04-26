@@ -155,10 +155,9 @@ $$
 \phi_{p,p'} = \frac{\sum_c s_{c,p} s_{c,p'}}{\max(k_{p}^{(0)}, k_{p'}^{(0)})}
 $$
 
-<div class="figure">
-<img src="fig/proximity.svg" alt="An illustrative example for the product proximity measure"  />
-<p class="caption">(\#fig:unnamed-chunk-1)An illustrative example for the product proximity measure</p>
-</div>
+```{r, echo = F, fig.cap="An illustrative example for the product proximity measure"}
+knitr::include_graphics("fig/proximity.svg")
+```
 
 ## Country Proximity
 

@@ -3,5 +3,5 @@ chapter_name: "Section "
 repo: https://github.com/observatory-economic-complexity/oec-documentation
 output_dir: docs
 rmd_files: ["index.Rmd", "01-sources.Rmd", "02-availability.Rmd", "03-processing.Rmd", 
-"04-measures.Rmd", "05-product-space.Rmd", "06-acknowledgements.Rmd", "07-references.Rmd"]
+"04-measures.Rmd", "05-references.Rmd"]
 new_session: yes

@@ -1,7 +1,7 @@
 --- 
 title: "OEC Documentation"
 author: "Pachá (Mauricio Vargas Sepúlveda)"
-date: "2018-04-26"
+date: "2018-05-04"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [references.bib]

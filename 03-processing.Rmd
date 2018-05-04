@@ -19,11 +19,15 @@ Let $x_{c,c',p}$ represent the exports of country $c$ to country $c'$ in product
 $$\hat{x}_{c,c',p} = \max\left\{x_{c,c',p}, \frac{m_{c',c,p}}{1.08}\right\}$$
 $$\hat{m}_{c,c',p} = \max\left\{x_{c',c,p}, \frac{m_{c,c',p}}{1.08}\right\}$$
 
+After symmetrization all observations are rounded to zero decimals.
+
+<!--
 ## Classification conversion in monthly data
 
 As [UN COMTRADE](https://comtrade.un.org/data/) states: "Monthly datasets may mix codes from multiple HS revisions and are provided as is except for standardization of trade flow and partner information, as well as conversion to US dollars."
 
 Our solution to obtain tidy datasets was to convert all HS codes available in raw datasets to HS rev 2007. In \@ref(materials-of-interest) I provide links to correspondence tables that allow us to do that conversion process.
+-->
 
 ## Countries not included in rankings and indicators
 

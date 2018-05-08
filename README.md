@@ -1,3 +1,5 @@
+# OEC Documentation
+
 ## Description
 
 This documentation is an attempt to try to explain how to use the scripts that generate the data that powers [The Atlas of Economic Complexity](https://atlas.media.mit.edu/). 

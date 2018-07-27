@@ -185,7 +185,7 @@ $$
 \Psi = (S\Phi) \oslash (\tilde{S}\Phi)
 $$
 
-Where $\hat{m}_{c,p} = 1$ and $\oslash$ denotes element-wise division.
+Where $\tilde{s}_{c,p} = 1$ and $\oslash$ denotes element-wise division.
 
 In other terms, each entry of $\Psi$ corresponds to:
 $$
